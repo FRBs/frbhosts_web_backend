@@ -62,10 +62,10 @@ def get_github_json(request):
                     context = ""
                     try:
                         for idx in data['photom']:
-                            if idx in ['Pan-STARRS_r','DECaL_r']:
+                            if idx in ['Pan-STARRS_r','DECaL_r','GMOS_N_r','GMOS_S_r']:
                                 context = data["photom"][idx]
                             else:
-                                if idx.find("_r'") >=0:
+                                if idx.find("_r:'") >=0:
                                     context = data['photom'][idx] 
                                 # else:
                                 #     if idx.find("_r_") >0:
