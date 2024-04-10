@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 import re
 from django.views.decorators.cache import cache_page
-repo_name = "https://github.com/FRBs/FRB/tree/main/frb/data/Galaxies"
+repo_name = "https://api.github.com/repos/FRBs/FRB/contents/frb/data/Galaxies"
 
 def home(request):
     return HttpResponse('Home Page')
